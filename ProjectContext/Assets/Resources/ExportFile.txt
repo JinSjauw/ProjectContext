@@ -1,0 +1,10 @@
+{"i_TotalPoints":9,
+"tmp_PointsText":{"instanceID":15862},
+"i_StrengthPoints":5,
+"tmp_StrengthText":{"instanceID":15784},
+"i_DexterityPoints":3,
+"tmp_DexterityText":{"instanceID":15776},
+"i_ConstitutionPoints":1,
+"tmp_ConstitutionText":{"instanceID":15872},
+"i_IntelligencePoints":2,
+"tmp_IntelligenceText":{"instanceID":15900}}
