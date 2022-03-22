@@ -21,6 +21,7 @@ public class Character
     private float HP;
     private float AttackPower;
     private float Speed;
+    public bool isDefending = false;
 
     public void Setup() 
     {
@@ -53,5 +54,4 @@ public class Character
     {
         HP = HP - damage;
     }
-
 }

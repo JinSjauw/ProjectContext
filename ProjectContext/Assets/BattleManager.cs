@@ -80,9 +80,41 @@ public class BattleManager : MonoBehaviour
         hasClicked = true;
     }
 
+    public void OnDefendButton() 
+    {
+        if (hasClicked) 
+        {
+            return;
+        }
+
+        switch (state)
+        {
+            case BattleState.PLAYER1TURN:
+                player1.isDefending = true;
+                Player2Turn();
+                break;
+            case BattleState.PLAYER2TURN:
+                player2.isDefending = true;
+                Player1Turn();
+                break;
+        }
+
+        Debug.Log("Has Clicked Defend!");
+
+        //hasClicked = true;
+    }
+
     IEnumerator Attack(Character attacker, Character defender) 
     {
-        defender.TakeDamage(attacker.GetAttackPower());
+        float defense = 1f;
+
+        if (defender.isDefending)
+        {
+            defense = defense - Random.Range(.25f, .7f);
+            defender.isDefending = false;
+        }
+
+        defender.TakeDamage(attacker.GetAttackPower() * defense);
 
         switch (state) 
         {
@@ -151,11 +183,5 @@ public class BattleManager : MonoBehaviour
 
         yield return null;
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
     }
 }

@@ -418,7 +418,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 12820099}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1770237249}
+        m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
+        m_MethodName: OnDefendButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &12820101
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -776,7 +788,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 210930490}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1770237249}
+        m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
+        m_MethodName: OnDefendButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &210930492
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1861,6 +1885,7 @@ MonoBehaviour:
     i_DexterityPoints: 0
     i_IntelligencePoints: 0
     characterImage: {fileID: 0}
+    isDefending: 0
   player2:
     i_TotalPoints: 0
     i_ConstitutionPoints: 0
@@ -1868,6 +1893,7 @@ MonoBehaviour:
     i_DexterityPoints: 0
     i_IntelligencePoints: 0
     characterImage: {fileID: 0}
+    isDefending: 0
   playerImage1: {fileID: 746964001}
   playerImage2: {fileID: 22290183}
   playerHUD1: {fileID: 4583658}
