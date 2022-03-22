@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public enum BattleState { START, RPS, PLAYER1TURN, PLAYER2TURN, WON, LOST }
+public enum BattleState { START, PLAYER1TURN, PLAYER2TURN, WON, LOST }
 
 public class BattleManager : MonoBehaviour
 {
@@ -39,19 +39,17 @@ public class BattleManager : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        state = BattleState.RPS;
         CoinFlip();
     }
 
     void CoinFlip() 
     {
-        int coin = Random.Range(0, 1);
+        int coin = Random.Range(0, 2);
+
         if(coin == 0) 
         {
             Player1Turn();
-        }
-
-        if(coin == 1) 
+        }else 
         {
             Player2Turn();
         }   
